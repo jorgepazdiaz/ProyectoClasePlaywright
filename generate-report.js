@@ -3,22 +3,18 @@ const reporter = require('multiple-cucumber-html-reporter');
 reporter.generate({
   jsonDir: 'reports',
   reportPath: 'reports/html-report',
+  displayDuration: true,
+  pageTitle: 'Automation Report',
+  reportName: 'Playwright Cucumber Report',
   metadata: {
     browser: {
-      name: 'chromium',
+      name: 'chrome',
       version: 'latest'
     },
-    device: 'Local machine',
+    device: 'CI',
     platform: {
-      name: 'macOS',
-      version: 'Sonoma'
+      name: 'ubuntu',
+      version: 'latest'
     }
-  },
-  customData: {
-    title: 'Execution Info',
-    data: [
-      { label: 'Project', value: 'Playwright + Cucumber' },
-      { label: 'Execution Date', value: new Date().toLocaleString() }
-    ]
   }
 });

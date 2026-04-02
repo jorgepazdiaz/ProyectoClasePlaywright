@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:regresion": "TAGS='@regresion' npx cucumber-js",
-    "test:formulario": "npx cucumber-js --config cucumber.js --tags '@formulario'",
-    "report": "node generate-report.js",
-    "test:formulario:report": "npm run test:formulario && npm run report && open reports/html-report/index.html"
-  },
+  "clean": "rm -rf reports",
+  "test:formulario": "npx cucumber-js --config cucumber.js --tags '@formulario'",
+  "report": "node generate-report.js",
+  "test:formulario:report": "npm run clean && npm run test:formulario && npm run report"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

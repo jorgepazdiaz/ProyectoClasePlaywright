@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Cache-control" content="public">
-    <title>Multiple Cucumber HTML Reporter</title>
+    <title>Automation Report</title>
 
     
         <script src="../assets/js/darkmode.js"></script>
@@ -835,7 +835,7 @@ body.darkmode .navbar-text {
                 </a>
             </div>
             <p class="navbar-text" style="float: left">Features Overview</p>
-            <p class="navbar-text">Multiple Cucumber HTML Reporter</p>
+            <p class="navbar-text">Playwright Cucumber Report</p>
         </div>
     </nav>
 
@@ -854,15 +854,15 @@ body.darkmode .navbar-text {
                 
             </div>
             <h1>Feature:
-                <small>Formulario de Novus Technology</small>
+                <small>Login</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    formulario.feature
+                    login.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    features/formulario.feature</p>
+                    features/login.feature</p>
             
         </div>
 
@@ -928,6 +928,11 @@ body.darkmode .navbar-text {
             </td>
         </tr>
         
+            <tr>
+                <th> Total duration:</th>
+                <tr><td>00:00:03.399</td></tr>
+            </tr>
+        
     </table>
 </div>
 
@@ -960,14 +965,14 @@ body.darkmode .navbar-text {
                     
                     
                     
-                    <i class="fa fa-question-circle not-defined-color fa-lg">
-                        <span>question-circle not-defined-color</span>
+                    <i class="fa fa-desktop fa-lg">
+                        <span>desktop</span>
                     </i>
                 </span>
             </li>
             <li>
                 <span class="meta-data-title">Device</span>
-                <span class="meta-data-data">Local machine</span>
+                <span class="meta-data-data">CI</span>
             </li>
             <li>
                 <span class="meta-data-title">OS</span>
@@ -976,10 +981,10 @@ body.darkmode .navbar-text {
                     
                     
                     
-                    <i class="fa fa-question-circle not-defined-color fa-lg">
-                        <span>question-circle not-defined-color</span>
+                    <i class="fa fa-linux fa-lg">
+                        <span>linux</span>
                     </i>
-                    Sonoma
+                    latest
                 </span>
             </li>
             
@@ -992,8 +997,8 @@ body.darkmode .navbar-text {
                     
                     
                     
-                    <i class="fa fa-question-circle not-defined-color fa-lg">
-                        <span>chromium</span>
+                    <i class="fa fa-chrome fa-lg">
+                        <span>chrome</span>
                     </i>
                     latest
                     
@@ -1054,7 +1059,7 @@ body.darkmode .navbar-text {
                     
                 </div>
 
-                <h2>Scenario: <small>Cuando ingreso todos los campos del formulario</small></h2>
+                <h2>Scenario: <small>realizo una compra</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -1071,12 +1076,17 @@ body.darkmode .navbar-text {
 
                     
                         <li>
-                            <span class="step passed-background" data-bs-toggle="tooltip" title="Scenario passed">9</span>
+                            <span class="step passed-background" data-bs-toggle="tooltip" title="Scenario passed">6</span>
                         </li>
                     
 
                     
 
+                    
+                        <li>
+                            <span style="font-size:1.2em"> Duration:</span>
+                            <span style=padding-right:5em>00:00:03.399</span>
+                        </li>
                     
                 </ul>
 
@@ -1103,10 +1113,82 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Given </span>
 
                                     
-                                        ingreso a la página de Novus Technology
+                                        ingreso a la página
                                         
                                     
 
+                                    
+                                        
+                                            <span class="duration">00:00:00.903</span>
+                                        
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        hago login con usuario "standard_user" y password "secret_sauce"
+                                        
+                                    
+
+                                    
+                                        
+                                            <span class="duration">00:00:00.715</span>
+                                        
                                     
 
                                 </div>
@@ -1167,10 +1249,14 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        mis datos personales con el nombre "Jorge" y el apellido "Paz"
+                                        agrego un producto al carrito
                                         
                                     
 
+                                    
+                                        
+                                            <span class="duration">00:00:00.220</span>
+                                        
                                     
 
                                 </div>
@@ -1231,10 +1317,14 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        ingreso mi correo electrónico "jorgepaz@test.con" y mi número de teléfono "1234567890"
+                                        voy al carrito
                                         
                                     
 
+                                    
+                                        
+                                            <span class="duration">00:00:00.227</span>
+                                        
                                     
 
                                 </div>
@@ -1295,266 +1385,14 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">And </span>
 
                                     
-                                        selecciono el pasatiempo
+                                        realizo el checkout
                                         
                                     
 
                                     
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        selecciono el género
                                         
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        selecciono el lugar el departamento "LIMA" y la ciudad "LIMA"
+                                            <span class="duration">00:00:01.310</span>
                                         
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        selecciono un comando
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-bs-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">And </span>
-
-                                    
-                                        cargo un documento
-                                        
-                                    
-
                                     
 
                                 </div>
@@ -1615,10 +1453,14 @@ body.darkmode .navbar-text {
                                     <span class="keyword highlight">Then </span>
 
                                     
-                                        visualizo un mensaje con el nombre y el apellido
+                                        debería ver la confirmación de compra
                                         
                                     
 
+                                    
+                                        
+                                            <span class="duration">00:00:00.021</span>
+                                        
                                     
 
                                 </div>

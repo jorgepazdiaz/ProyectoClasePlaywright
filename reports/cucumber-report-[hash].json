@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4998172999
+              "duration": 2496488125
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2033754541
+              "duration": 1661658249
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 485846041
+              "duration": 494473584
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 428045290
+              "duration": 448441832
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3161558375
+              "duration": 3622833292
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 288158667
+              "duration": 225270582
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 430901458
+              "duration": 434314166
             }
           },
           {
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 212211792
+              "duration": 212359667
             }
           },
           {
@@ -118,7 +118,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 216994125
+              "duration": 211934083
             }
           },
           {
@@ -131,7 +131,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 231812332
+              "duration": 237821458
             }
           },
           {
@@ -139,7 +139,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 155032707
+              "duration": 30050833
             }
           }
         ],
@@ -158,5 +158,126 @@
     "name": "Formulario de Novus Technology",
     "tags": [],
     "uri": "tests/features/formulario.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;realizo-una-compra",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "realizo una compra",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 179001958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "ingreso a la página",
+            "match": {
+              "location": "tests/steps/login.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 903940374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "hago login con usuario \"standard_user\" y password \"secret_sauce\"",
+            "match": {
+              "location": "tests/steps/login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 715229041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "agrego un producto al carrito",
+            "match": {
+              "location": "tests/steps/login.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220989499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "voy al carrito",
+            "match": {
+              "location": "tests/steps/login.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 227087667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "realizo el checkout",
+            "match": {
+              "location": "tests/steps/login.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1310994249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "debería ver la confirmación de compra",
+            "match": {
+              "location": "tests/steps/login.steps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21214083
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31443832
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "tests/features/login.feature"
   }
 ]
