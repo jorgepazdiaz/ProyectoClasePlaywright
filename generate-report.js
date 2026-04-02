@@ -1,7 +1,7 @@
 const reporter = require('multiple-cucumber-html-reporter');
 
 reporter.generate({
-  jsonFile: 'reports/cucumber-report.json',
+  jsonDir: 'reports', 
   reportPath: 'reports/html-report',
   displayDuration: true,
   pageTitle: 'Automation Report',
