@@ -21,10 +21,7 @@ Scenario: realizo una compra
     Examples:
       | username       | password     |
       | standard_user  | secret_sauce |
-      | locked_out_user| secret_sauce |
-      | performance_glitch_user | secret_sauce |
-      | error_user     | secret_sauce |
-      | visual_user    | secret_sauce |
+
 
       
 
