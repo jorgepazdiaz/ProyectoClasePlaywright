@@ -1,20 +1,32 @@
-const reporter = require('multiple-cucumber-html-reporter');
+const report = require("multiple-cucumber-html-reporter");
 
-reporter.generate({
-  jsonDir: 'reports', 
-  reportPath: 'reports/html-report',
-  displayDuration: true,
-  pageTitle: 'Automation Report',
-  reportName: 'Playwright Cucumber Report',
+report.generate({
+  jsonDir: "reports/json",
+  reportPath: "reports/html-report",
+  pageTitle: "Reporte Curso Playwright",
+  reportName: "Playwright Cucumber Report",
+
   metadata: {
     browser: {
-      name: 'chrome',
-      version: 'latest'
+      name: "chrome",
+      version: "latest",
     },
-    device: 'CI',
+    device: "CI",
     platform: {
-      name: 'ubuntu',
-      version: 'latest'
-    }
-  }
+      name: "linux",
+      version: "ubuntu-latest",
+    },
+  },
+
+  customData: {
+    title: "Execution Info",
+    data: [
+      { label: "Project", value: "Playwright + Cucumber" },
+      { label: "Execution", value: "GitHub Actions" },
+    ],
+  },
+
+  // 🔥🔥🔥 CLAVE PARA GITHUB PAGES
+  disableLog: true,
+  displayDuration: true,
 });

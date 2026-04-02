@@ -9,7 +9,7 @@ module.exports = {
     ],
     format: [
   'progress',
-  'json:reports/cucumber-report.json'
+  'json:reports/json/cucumber-report.json'
 ],
     paths: [
       'tests/features/**/*.feature'

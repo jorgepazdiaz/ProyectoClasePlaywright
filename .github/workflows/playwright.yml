@@ -71,4 +71,11 @@ jobs:
           publish_dir: reports/html-report   # 🔥 sin ./
           publish_branch: gh-pages
           force_orphan: true
-          commit_message: "deploy report run ${{ github.run_number }}"  # 🔥 evita cache
+          keep_files: false
+          enable_jekyll: false
+          commit_message: "deploy report run ${{ github.run_id }}" # 🔥 evita cache
+      
+      - name: Fix report paths for GitHub Pages
+        run: |
+                find reports/html-report -type f -name "*.html" -exec sed -i 's|href="/|href="./|g' {} +
+                find reports/html-report -type f -name "*.html" -exec sed -i 's|src="/|src="./|g' {} +
