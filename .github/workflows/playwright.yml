@@ -6,13 +6,12 @@ on:
   pull_request:
     branches: [ main, master ]
 
-  # 🔥 EJECUCIÓN MANUAL CON TAGS
   workflow_dispatch:
     inputs:
       tags:
         description: "Tags de Cucumber a ejecutar (ej: @formulario o @smoke)"
         required: false
-        default: "@smoke"
+        default: "@regresion"
 
 permissions:
   contents: write
@@ -23,7 +22,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # 🔥 Si no mandas tags usa default
       TAGS: ${{ github.event.inputs.tags || '@smoke' }}
 
     steps:
@@ -39,17 +37,23 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      # 🔥 EJECUCIÓN DINÁMICA POR TAG
+      # 🔥 LIMPIAR REPORTES (CLAVE)
+      - name: Clean reports
+        run: rm -rf reports
+
+      # 🔥 EJECUCIÓN POR TAG
       - name: Run Cucumber tests
         run: npx cucumber-js --config cucumber.js --tags "${TAGS}"
 
+      # 🔥 GENERAR REPORTE
       - name: Generate HTML report
         run: node generate-report.js
 
-      # 🔍 DEBUG
+      # 🔍 DEBUG (opcional)
       - name: Verify report folder
         run: ls -la reports/html-report
 
+      # 📦 GUARDAR ARTIFACT
       - name: Upload report artifact
         uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
@@ -58,12 +62,13 @@ jobs:
           path: reports/html-report/
           retention-days: 30
 
-      # 🚀 DEPLOY A GITHUB PAGES (FIX DEFINITIVO)
+      # 🚀 DEPLOY A GITHUB PAGES
       - name: Deploy report to GitHub Pages
         if: ${{ !cancelled() }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reports/html-report
+          publish_dir: reports/html-report   # 🔥 sin ./
           publish_branch: gh-pages
-          force_orphan: true   # 🔥 CLAVE PARA EVITAR 404
+          force_orphan: true
+          commit_message: "deploy report run ${{ github.run_number }}"  # 🔥 evita cache
