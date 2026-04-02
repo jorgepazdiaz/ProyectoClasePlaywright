@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import { Buffer } from 'buffer';
 
 //constructor(private page: Page) {} es una forma de declarar e inicializar una propiedad privada llamada "page" en la clase ClicksPage. Esto permite que la instancia de ClicksPage tenga acceso a la página de Playwright para interactuar con ella en los métodos de la clase.
 export class ClicksPage {
