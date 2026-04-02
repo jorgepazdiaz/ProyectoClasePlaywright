@@ -6,13 +6,25 @@ on:
   pull_request:
     branches: [ main, master ]
 
+  # 🔥 EJECUCIÓN MANUAL CON TAGS
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: "Tags de Cucumber a ejecutar (ej: @formulario o @smoke)"
+        required: false
+        default: "@smoke"
+
 permissions:
-  contents: write   # 🔥 CLAVE para evitar el 403
+  contents: write
 
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
+    env:
+      # 🔥 Si no mandas tags usa default
+      TAGS: ${{ github.event.inputs.tags || '@smoke' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -27,13 +39,14 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      # 🔥 EJECUCIÓN DINÁMICA POR TAG
       - name: Run Cucumber tests
-        run: npx cucumber-js --config cucumber.js
+        run: npx cucumber-js --config cucumber.js --tags "${TAGS}"
 
       - name: Generate HTML report
         run: node generate-report.js
 
-      # 🔍 DEBUG (opcional pero útil)
+      # 🔍 DEBUG
       - name: Verify report folder
         run: ls -la reports/html-report
 
@@ -45,7 +58,7 @@ jobs:
           path: reports/html-report/
           retention-days: 30
 
-      # 🚀 DEPLOY A GITHUB PAGES
+      # 🚀 DEPLOY A GITHUB PAGES (FIX DEFINITIVO)
       - name: Deploy report to GitHub Pages
         if: ${{ !cancelled() }}
         uses: peaceiris/actions-gh-pages@v3
@@ -53,3 +66,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./reports/html-report
           publish_branch: gh-pages
+          force_orphan: true   # 🔥 CLAVE PARA EVITAR 404
