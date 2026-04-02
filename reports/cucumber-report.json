@@ -1,0 +1,162 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "formulario-de-novus-technology;cuando-ingreso-todos-los-campos-del-formulario",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Cuando ingreso todos los campos del formulario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4998172999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "ingreso a la página de Novus Technology",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2033754541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "mis datos personales con el nombre \"Jorge\" y el apellido \"Paz\"",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 485846041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "ingreso mi correo electrónico \"jorgepaz@test.con\" y mi número de teléfono \"1234567890\"",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 428045290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "selecciono el pasatiempo",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3161558375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "selecciono el género",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288158667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "selecciono el lugar el departamento \"LIMA\" y la ciudad \"LIMA\"",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 430901458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "selecciono un comando",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 212211792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "cargo un documento",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 216994125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "visualizo un mensaje con el nombre y el apellido",
+            "match": {
+              "location": "tests/steps/formulario.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231812332
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155032707
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "formulario-de-novus-technology",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Formulario de Novus Technology",
+    "tags": [],
+    "uri": "tests/features/formulario.feature"
+  }
+]
