@@ -14,7 +14,7 @@ export class CustomWorld {
 
   async init() {
     this.browser = await chromium.launch({
-      headless: false,
+      headless: true,
       slowMo: 200, // opcional para debug
       args: ['--disable-dev-shm-usage'] // Trabaja el tiempo de espera para evitar errores de memoria en contenedores o entornos limitados
     });
