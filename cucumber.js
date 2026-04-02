@@ -8,9 +8,9 @@ module.exports = {
       'ts-node/register'
     ],
     format: [
-      'progress',
-       'json:reports/cucumber-report-[hash].json'
-    ],
+  'progress',
+  'json:reports/cucumber-report.json'
+],
     paths: [
       'tests/features/**/*.feature'
     ],

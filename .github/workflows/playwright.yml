@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       tags:
-        description: "Tags de Cucumber a ejecutar (ej: @formulario o @smoke)"
+        description: "Tags de Cucumber a ejecutar (ej: @formulario o @regresion)"
         required: false
-        default: "@regresion"
+        default: "@formulario"
 
 permissions:
   contents: write
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      TAGS: ${{ github.event.inputs.tags || '@smoke' }}
+      TAGS: ${{ github.event.inputs.tags || '@formulario' }}
 
     steps:
       - uses: actions/checkout@v4
