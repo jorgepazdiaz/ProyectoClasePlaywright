@@ -5,6 +5,7 @@ Feature: Login
     When hago login con usuario "standard_user" y password "secret_sauce"
     Then debería ver el dashboard
 
+@formulario
 Scenario: realizo una compra
     Given ingreso a la página
     When hago login con usuario "standard_user" y password "secret_sauce"
