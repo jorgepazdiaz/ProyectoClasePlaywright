@@ -22,9 +22,14 @@ export class ClicksPage {
 
   //metodo para cargar un documento
   async CargarDocumento() {
-    const fileInput = this.page.locator('#picture');
-    await fileInput.setInputFiles('/Users/jorgepazdiaz/Desktop/Jorge Personal/111.png'); // Reemplaza con la ruta de tu archivo
-  }
+  const fileInput = this.page.locator('#picture');
+
+  await fileInput.setInputFiles({
+    name: 'test.png',
+    mimeType: 'image/png',
+    buffer: Buffer.from('archivo de prueba')
+  });
+}
   
 }
 
